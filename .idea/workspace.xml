@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2d8f78c-14ea-4b84-ae63-2612bc6d6306" name="Changes" comment="test1">
-      <change afterPath="$PROJECT_DIR$/server/socket/Server_socket.java" afterDir="false" />
+    <list default="true" id="c2d8f78c-14ea-4b84-ae63-2612bc6d6306" name="Changes" comment="27-nov-2022: try socket">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/socket/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/socket/ClientSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/displays/ClientDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/displays/ClientDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/display_test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/display_test/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infos/SystemInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/infos/SystemInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytemplate/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/mytemplate/MyFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/socket/Server_socket.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/socket/Server_socket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +37,11 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/priscafehiarisoadama/Desktop/socket/_1950-Parc-info"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ClientSocket">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ClientSocket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.socket.ClientSocket" />
       <module name="_1950-Parc-info" />
@@ -81,9 +83,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ClientSocket" />
         <item itemvalue="Application.Server_socket" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -95,7 +97,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669526939174</updated>
-      <workItem from="1669526940283" duration="11215000" />
+      <workItem from="1669526940283" duration="15539000" />
+      <workItem from="1669655345175" duration="361000" />
+      <workItem from="1669655981935" duration="2226000" />
     </task>
     <task id="LOCAL-00001" summary="nth try">
       <created>1669527598984</created>
@@ -118,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669529185709</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="27-nov-2022: try socket">
+      <created>1669573456148</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669573456148</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +149,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nth try" />
     <MESSAGE value="test1" />
-    <option name="LAST_COMMIT_MESSAGE" value="test1" />
+    <MESSAGE value="27-nov-2022: try socket" />
+    <option name="LAST_COMMIT_MESSAGE" value="27-nov-2022: try socket" />
   </component>
 </project>

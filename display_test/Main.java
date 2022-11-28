@@ -1,6 +1,7 @@
 package display_test;
 
 import infos.SystemInfo;
+import mytemplate.MyFrame;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;
@@ -41,9 +42,14 @@ public class Main {
 
             System.out.println(System.getProperty("user.name"));
         }
+
+
         catch(Exception e)
             {
                 e.printStackTrace();
             }
+        MyFrame frame=new MyFrame();
+        
+        frame.showPannel();
         }
     }

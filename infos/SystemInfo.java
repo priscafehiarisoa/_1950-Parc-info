@@ -3,6 +3,7 @@ package infos;
 import java.io.Serializable;
 import java.net.*;
 import java.util.Enumeration;
+import java.util.Vector;
 
 public class SystemInfo implements Serializable {
     String OperatingSystem;
@@ -17,7 +18,7 @@ public class SystemInfo implements Serializable {
         return UserName;
     }
 
-    public void setUserName(String userName) {
+    public void setUserName() {
         UserName = System.getProperty("user.name");
     }
 
@@ -90,6 +91,7 @@ public class SystemInfo implements Serializable {
         setOperatingSystem();
         setOSVersion();
         setProcessorscores();
+        setUserName();
 
     }
 
@@ -102,5 +104,14 @@ public class SystemInfo implements Serializable {
         System.out.println("OS version :"+getOSVersion());
         System.out.println("processorscores : "+getProcessorscores());
         System.out.println("CPU :"+getCPU());
+    }
+    public boolean isInList(Vector<SystemInfo> SI){
+        for (int i = 0; i < SI.size(); i++) {
+            if(this.getIpaddress().equals(SI.get(i).getIpaddress()))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
