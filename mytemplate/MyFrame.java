@@ -5,6 +5,7 @@ import java.awt.*;
 
 public class MyFrame extends JFrame {
     JPanel mypannel;
+
     String titre;
 
 
@@ -25,13 +26,14 @@ public class MyFrame extends JFrame {
         this.mypannel = mypannel;
     }
 
-    public MyFrame() throws HeadlessException {
+    public MyFrame(String titre) throws HeadlessException {
+        setTitre(titre);
         setMypannel(new JPanel());
         getMypannel().setAutoscrolls(true);
         setLayout(new BorderLayout());
         getMypannel().add(new JLabel(getTitre()), BorderLayout.NORTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(new Dimension(500,500));
+        setSize(new Dimension(1000,500));
         setLocationRelativeTo(null);
         add(this.getMypannel());
     }

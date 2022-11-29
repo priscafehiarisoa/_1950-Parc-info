@@ -2,6 +2,8 @@ package client.displays;
 
 import mytemplate.MyFrame;
 
+import java.util.Vector;
+
 public class ClientDisplay {
     MyFrame clientWindow;
 
@@ -13,8 +15,6 @@ public class ClientDisplay {
         this.clientWindow = clientWindow;
     }
 
-    public void addTable()
-    {
 
-    }
+
 }

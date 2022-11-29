@@ -1,13 +1,17 @@
 package infos;
 
 import java.io.Serializable;
+import java.lang.reflect.Field;
 import java.net.*;
 import java.util.Enumeration;
 import java.util.Vector;
 
 public class SystemInfo implements Serializable {
-    String OperatingSystem;
+
     String UserName;
+    String OperatingSystem;
+
+
     String OSVersion;
     String CPU;
     int processorsCores;
@@ -113,5 +117,38 @@ public class SystemInfo implements Serializable {
             }
         }
         return false;
+    }
+
+/*    public String [] createSystemInfoTable()
+    {
+        Field [] field= getClass().getDeclaredFields();
+        String [] data=new String[field.length];
+        for (int i = 0; i < field.length; i++) {
+            data[i]=this.getClass().getMethod()
+        }
+    }*/
+
+    public String [] createSystemInfoTable()
+    {
+        String [] data=new String[7];
+        data[0]=getUserName();
+        data[1]=getOperatingSystem();
+        data[2]=getOSVersion();
+        data[3]=getCPU();
+        data[4]=String.valueOf(getProcessorscores());
+        data[5]=getIpaddress();
+        data[6]=getMacAddress();
+
+        return data;
+    }
+    public String [] getAttributs()
+    {
+        Field [] field= getClass().getDeclaredFields();
+        String [] attr=new String[field.length];
+        for (int i = 0; i < field.length; i++) {
+            attr[i]=field[i].getName();
+        }
+        return attr;
+
     }
 }

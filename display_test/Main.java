@@ -2,12 +2,16 @@ package display_test;
 
 import infos.SystemInfo;
 import mytemplate.MyFrame;
+import mytemplate.Tableau;
 
+import javax.swing.*;
+import java.awt.*;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.util.Enumeration;
+import java.util.Vector;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,15 +45,29 @@ public class Main {
             System.out.println(s.getMacAddress());
 
             System.out.println(System.getProperty("user.name"));
+            Vector<SystemInfo> myinfos=new Vector<>();
+
+            Tableau tab=new Tableau(myinfos);
+            MyFrame frame=new MyFrame("ma page");
+            SystemInfo test=new SystemInfo();
+            String [] column= test.getAttributs();
+            String [][] datas=tab.createStringTable();
+            JTable jt = new JTable(datas, column);
+            jt.setMinimumSize(new Dimension(400,500));
+//            jt.setBounds(30, 40, 200, 300);
+            JScrollPane sp = new JScrollPane(jt);
+            frame.getMypannel().add(sp, BorderLayout.CENTER);
+            frame.showPannel();
+
         }
+
+
 
 
         catch(Exception e)
             {
                 e.printStackTrace();
             }
-        MyFrame frame=new MyFrame();
-        
-        frame.showPannel();
+
         }
     }
