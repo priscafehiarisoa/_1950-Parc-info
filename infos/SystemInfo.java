@@ -1,6 +1,8 @@
 package infos;
 
+import java.io.File;
 import java.io.Serializable;
+import java.lang.management.ManagementFactory;
 import java.lang.reflect.Field;
 import java.net.*;
 import java.util.Enumeration;
@@ -11,12 +13,30 @@ public class SystemInfo implements Serializable {
     String UserName;
     String OperatingSystem;
 
-
     String OSVersion;
     String CPU;
     int processorsCores;
     String ipaddress;
     String macAddress;
+    double ram;
+    double totaldisk;
+
+    public double getRam() {
+        return ram;
+    }
+
+    public void setRam() {
+        this.ram = ((com.sun.management.OperatingSystemMXBean) ManagementFactory
+                .getOperatingSystemMXBean()).getTotalPhysicalMemorySize() * 9.31e10;
+    }
+
+    public double getTotaldisk() {
+        return totaldisk;
+    }
+
+    public void setTotaldisk(Long totaldisk) {
+        this.totaldisk = new File("/").getTotalSpace() * 9.31e-10;
+    }
 
     public String getUserName() {
         return UserName;

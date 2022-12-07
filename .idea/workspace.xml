@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2d8f78c-14ea-4b84-ae63-2612bc6d6306" name="Changes" comment="29-nov-2022: swing">
+    <list default="true" id="c2d8f78c-14ea-4b84-ae63-2612bc6d6306" name="Changes" comment="7-dec-2022: rectifications">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/socket/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/socket/ClientSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/display_test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/display_test/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infos/SystemInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/infos/SystemInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/socket/Server_socket.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/socket/Server_socket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +103,7 @@
       <workItem from="1669823691177" duration="10000" />
       <workItem from="1669886879841" duration="730000" />
       <workItem from="1670307890371" duration="1847000" />
-      <workItem from="1670376108851" duration="1097000" />
+      <workItem from="1670376108851" duration="2301000" />
     </task>
     <task id="LOCAL-00001" summary="nth try">
       <created>1669527598984</created>
@@ -150,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669694911934</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="7-dec-2022: rectifications">
+      <created>1670400867871</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670400867872</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +177,7 @@
     <MESSAGE value="27-nov-2022: try socket" />
     <MESSAGE value="28-nov-2022: swing" />
     <MESSAGE value="29-nov-2022: swing" />
-    <option name="LAST_COMMIT_MESSAGE" value="29-nov-2022: swing" />
+    <MESSAGE value="7-dec-2022: rectifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="7-dec-2022: rectifications" />
   </component>
 </project>
