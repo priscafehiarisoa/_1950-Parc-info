@@ -11,8 +11,11 @@ public class ClientSocket {
         try {
             String hostW="10.211.55.4";
             String hostM="localhost";
-            SystemInfo infos=new SystemInfo();
-            Socket s = new Socket(hostW, 6666);
+            String hostMac="10.37.129.2";
+            String hostTec="192.168.54.225";
+            Socket s = new Socket(hostM, 6666);
+
+            SystemInfo infos=new SystemInfo(s.getInetAddress().getHostName());
             ObjectOutputStream dout=new ObjectOutputStream(s.getOutputStream());
             dout.writeObject(infos);
             dout.flush();

@@ -88,10 +88,24 @@ public class SystemInfo implements Serializable {
         ipaddress=ipv4;
     }
 
+    public void setIpaddress(String ipaddress) {
+        this.ipaddress = ipaddress;
+    }
+
     public SystemInfo() throws Exception{
         setMacAddress();
         setCPU("");
         setIpaddress();
+        setOperatingSystem();
+        setOSVersion();
+        setProcessorscores();
+        setUserName();
+
+    }
+    public SystemInfo(String ipaddress) throws Exception{
+        setMacAddress();
+        setCPU("");
+        setIpaddress(ipaddress);
         setOperatingSystem();
         setOSVersion();
         setProcessorscores();
@@ -109,6 +123,8 @@ public class SystemInfo implements Serializable {
         System.out.println("processorscores : "+getProcessorscores());
         System.out.println("CPU :"+getCPU());
     }
+
+
     public boolean isInList(Vector<SystemInfo> SI){
         for (int i = 0; i < SI.size(); i++) {
             if(this.getIpaddress().equals(SI.get(i).getIpaddress()))

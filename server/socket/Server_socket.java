@@ -22,8 +22,14 @@ public class Server_socket {
 
     public static void main(String[] args) {
         Vector<SystemInfo> myinfos=new Vector<>();
+        MyFrame frame=new MyFrame("ma page");
+        int o=0;
         while(true) {
             try {
+              /*  if(o!=0)
+                {
+                    frame.dispose();
+                }*/
                 System.out.println("ordinateurs connectes" + myinfos.size());
                 ServerSocket socket = new ServerSocket(6666);
                 Socket s = socket.accept();
@@ -31,21 +37,23 @@ public class Server_socket {
                 SystemInfo info = (SystemInfo) dis.readObject();
                 info.showSysteminfo();
                 socket.close();
-
+                System.out.println(s.getInetAddress().getHostName());
                 if( !info.isInList(myinfos))
                 {
                     myinfos.add(info);
                 }
-                MyFrame frame=new MyFrame("ma page");
                 Tableau tab=new Tableau(myinfos);
                 JScrollPane t =tab.createJtable();
                 frame.getMypannel().add(t);
                 frame.repaint();
                 frame.showPannel();
+                o=1;
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
+
+
         }
 
     }
