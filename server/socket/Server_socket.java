@@ -3,9 +3,12 @@ package server.socket;
 import infos.SystemInfo;
 import mytemplate.MyFrame;
 import mytemplate.Tableau;
+import thread.Mythread;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.DataInputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -20,30 +23,26 @@ public class Server_socket {
         return socket1;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Vector<SystemInfo> myinfos=new Vector<>();
         MyFrame frame=new MyFrame("ma page");
+        ServerSocket socket = new ServerSocket(1234);
+
         int o=0;
         while(true) {
             try {
-              /*  if(o!=0)
-                {
-                    frame.dispose();
-                }*/
                 System.out.println("ordinateurs connectes" + myinfos.size());
-                ServerSocket socket = new ServerSocket(6666);
                 Socket s = socket.accept();
-                ObjectInputStream dis = new ObjectInputStream(s.getInputStream());
-                SystemInfo info = (SystemInfo) dis.readObject();
-                info.showSysteminfo();
-                socket.close();
-                System.out.println(s.getInetAddress().getHostName());
-                if( !info.isInList(myinfos))
-                {
-                    myinfos.add(info);
-                }
+                Mythread thread=new Mythread(s,myinfos);
+                thread.start();
+                thread.join();
+//                Thread.sleep(3000);
                 Tableau tab=new Tableau(myinfos);
-                JScrollPane t =tab.createJtable();
+//                JTable t =tab.createJtable();
+                JScrollPane t =tab.createJtable2();
+
+                t.setPreferredSize(new Dimension(1000,450));
+                frame.getMypannel().remove(0);
                 frame.getMypannel().add(t);
                 frame.repaint();
                 frame.showPannel();

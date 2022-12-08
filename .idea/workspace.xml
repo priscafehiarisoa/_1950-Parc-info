@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2d8f78c-14ea-4b84-ae63-2612bc6d6306" name="Changes" comment="7-dec-2022: rectifications">
+      <change afterPath="$PROJECT_DIR$/thread/Mythread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/socket/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/socket/ClientSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/display_test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/display_test/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infos/SystemInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/infos/SystemInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytemplate/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/mytemplate/MyFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytemplate/Tableau.java" beforeDir="false" afterPath="$PROJECT_DIR$/mytemplate/Tableau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/socket/Server_socket.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/socket/Server_socket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +44,12 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="thread" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ClientSocket">
     <configuration name="ClientSocket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.socket.ClientSocket" />
       <module name="_1950-Parc-info" />
@@ -80,9 +91,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ClientSocket" />
         <item itemvalue="Application.Server_socket" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -103,7 +114,11 @@
       <workItem from="1669823691177" duration="10000" />
       <workItem from="1669886879841" duration="730000" />
       <workItem from="1670307890371" duration="1847000" />
-      <workItem from="1670376108851" duration="2301000" />
+      <workItem from="1670376108851" duration="5649000" />
+      <workItem from="1670408719686" duration="5459000" />
+      <workItem from="1670435964032" duration="2780000" />
+      <workItem from="1670440671569" duration="227000" />
+      <workItem from="1670470775669" duration="1963000" />
     </task>
     <task id="LOCAL-00001" summary="nth try">
       <created>1669527598984</created>
@@ -154,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670400867872</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="7-dec-2022: rectifications">
+      <created>1670402260274</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670402260274</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

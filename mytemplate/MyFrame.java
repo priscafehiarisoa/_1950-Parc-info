@@ -24,18 +24,20 @@ public class MyFrame extends JFrame {
 
     public void setMypannel(JPanel mypannel) {
         this.mypannel = mypannel;
+        getMypannel().setSize(1000,600);
     }
 
     public MyFrame(String titre) throws HeadlessException {
-        setTitre(titre);
+        setTitle(titre);
         setMypannel(new JPanel());
         getMypannel().setAutoscrolls(true);
         setLayout(new BorderLayout());
         getMypannel().add(new JLabel(getTitre()), BorderLayout.NORTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(new Dimension(1000,500));
+        setSize(new Dimension(1100,550));
         setLocationRelativeTo(null);
-        add(this.getMypannel());
+        JScrollPane j=new JScrollPane(getMypannel());
+        add(j);
     }
 
     public void showPannel()

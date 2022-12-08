@@ -37,24 +37,42 @@ public class Tableau {
         int size= getInfoSysteme().size();
         Field[] field=tries.getClass().getDeclaredFields();
         String[][] datas=new String[size][field.length];
+        System.out.println("hhehehee: "+field.length);
         for (int i = 0; i < getInfoSysteme().size(); i++) {
             datas[i]=getInfoSysteme().get(i).createSystemInfoTable();
         }
         return datas;
     }
 
-    public JScrollPane createJtable () throws Exception/**/
+    public JScrollPane createJtable2 () throws Exception/**/
     {
         SystemInfo test=new SystemInfo();
         String [] column= test.getAttributs();
         String [][] datas=createStringTable();
          JTable jt = new JTable(datas, column);
-        jt.setBounds(30, 40, 500, 300);
-        jt.setSize(500,500);
+       /* for (int i = 0; i < column.length; i++) {
+            jt.getColumnModel().getColumn(i).setPreferredWidth(100);
+        }*/
         JScrollPane sp = new JScrollPane(jt);
+//        sp.setSize(1000,500);
         System.out.println("column");
 
         return sp;
+    }
+    public JTable createJtable () throws Exception/**/
+    {
+        SystemInfo test=new SystemInfo();
+        String [] column= test.getAttributs();
+        String [][] datas=createStringTable();
+        JTable jt = new JTable(datas, column);
+      /*  for (int i = 0; i < column.length; i++) {
+            jt.getColumnModel().getColumn(i).setPreferredWidth(300);
+        }*/
+        JScrollPane sp = new JScrollPane(jt);
+        sp.setSize(1000,500);
+        System.out.println("column");
+
+        return jt;
     }
 
 

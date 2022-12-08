@@ -16,7 +16,8 @@ import java.util.Vector;
 public class Main {
     public static void main(String[] args) {
         try {
-
+            SystemInfo sti=new SystemInfo();
+            sti.showSysteminfo();
         }
 
 

@@ -20,7 +20,17 @@ public class SystemInfo implements Serializable {
     String macAddress;
     double ram;
     double totaldisk;
+    double freeDiskMemory;
 
+    public double getFreeDiskMemory() {
+        return freeDiskMemory;
+    }
+
+    public void setFreeDiskMemory() {
+
+        this.freeDiskMemory = new File("/").getFreeSpace()*9.31e-10;
+    }
+//111
     public double getRam() {
         return ram;
     }
@@ -29,15 +39,16 @@ public class SystemInfo implements Serializable {
         this.ram = ((com.sun.management.OperatingSystemMXBean) ManagementFactory
                 .getOperatingSystemMXBean()).getTotalPhysicalMemorySize() * 9.31e10;
     }
+    //111
 
     public double getTotaldisk() {
         return totaldisk;
     }
 
-    public void setTotaldisk(Long totaldisk) {
+    public void setTotaldisk() {
         this.totaldisk = new File("/").getTotalSpace() * 9.31e-10;
     }
-
+    //111
     public String getUserName() {
         return UserName;
     }
@@ -45,7 +56,7 @@ public class SystemInfo implements Serializable {
     public void setUserName() {
         UserName = System.getProperty("user.name");
     }
-
+    //111
     public String getMacAddress() {
         return macAddress;
     }
@@ -65,39 +76,36 @@ public class SystemInfo implements Serializable {
         }
 
     }
-
+    //111
     public void setOperatingSystem() {
         OperatingSystem = System.getProperty("os.name");
     }
-
-    public void setOSVersion() {
-        this.OSVersion = System.getProperty("os.version");
-    }
-
-    public void setCPU(String CPU) {
-        this.CPU = CPU;
-    }
-
-    public void setProcessorscores() {
-        this.processorsCores = Runtime.getRuntime().availableProcessors();
-    }
-
     public String getOperatingSystem() {
         return OperatingSystem;
     }
-
+    //111
+    public void setOSVersion() {
+        this.OSVersion = System.getProperty("os.version");
+    }
     public String getOSVersion() {
         return OSVersion;
     }
-
+//111
+    public void setCPU(String CPU) {
+        this.CPU = CPU;
+    }
     public String getCPU() {
         return CPU;
     }
-
+//    111
+    public void setProcessorscores() {
+        this.processorsCores = Runtime.getRuntime().availableProcessors();
+    }
     public int getProcessorscores() {
         return processorsCores;
     }
 
+//    111
     public String getIpaddress() {
         return ipaddress;
     }
@@ -111,7 +119,7 @@ public class SystemInfo implements Serializable {
     public void setIpaddress(String ipaddress) {
         this.ipaddress = ipaddress;
     }
-
+//111
     public SystemInfo() throws Exception{
         setMacAddress();
         setCPU("");
@@ -120,6 +128,10 @@ public class SystemInfo implements Serializable {
         setOSVersion();
         setProcessorscores();
         setUserName();
+        setFreeDiskMemory();
+        setRam();
+        setTotaldisk();
+        setFreeDiskMemory();
 
     }
     public SystemInfo(String ipaddress) throws Exception{
@@ -130,6 +142,10 @@ public class SystemInfo implements Serializable {
         setOSVersion();
         setProcessorscores();
         setUserName();
+        setRam();
+        setTotaldisk();
+        setFreeDiskMemory();
+
 
     }
 
@@ -142,6 +158,9 @@ public class SystemInfo implements Serializable {
         System.out.println("OS version :"+getOSVersion());
         System.out.println("processorscores : "+getProcessorscores());
         System.out.println("CPU :"+getCPU());
+        System.out.println("ram: "+getRam());
+        System.out.println("total disk: "+getTotaldisk());
+        System.out.println("free disk: "+getFreeDiskMemory());
     }
 
 
@@ -166,7 +185,7 @@ public class SystemInfo implements Serializable {
 
     public String [] createSystemInfoTable()
     {
-        String [] data=new String[7];
+        String [] data=new String[10];
         data[0]=getUserName();
         data[1]=getOperatingSystem();
         data[2]=getOSVersion();
@@ -174,6 +193,9 @@ public class SystemInfo implements Serializable {
         data[4]=String.valueOf(getProcessorscores());
         data[5]=getIpaddress();
         data[6]=getMacAddress();
+        data[7]= String.valueOf(getRam());
+        data[8]= String.valueOf(getTotaldisk());
+        data[9]= String.valueOf(getFreeDiskMemory());
 
         return data;
     }

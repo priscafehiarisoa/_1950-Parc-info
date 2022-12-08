@@ -13,7 +13,7 @@ public class ClientSocket {
             String hostM="localhost";
             String hostMac="10.37.129.2";
             String hostTec="192.168.54.225";
-            Socket s = new Socket(hostM, 6666);
+            Socket s = new Socket(hostM, 1234);
 
             SystemInfo infos=new SystemInfo(s.getInetAddress().getHostName());
             ObjectOutputStream dout=new ObjectOutputStream(s.getOutputStream());
@@ -25,5 +25,5 @@ public class ClientSocket {
             System.out.println(e);
         }
 
-}
+    }
 }
