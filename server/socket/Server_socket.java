@@ -15,10 +15,19 @@ import java.net.Socket;
 import java.util.Vector;
 
 public class Server_socket {
+    static int port=1234;
+
+    public static int getPort() {
+        return port;
+    }
+
+    public static void setPort(int port) {
+        Server_socket.port = port;
+    }
 
     public static Socket createServer() throws Exception
     {
-        ServerSocket socket=new ServerSocket(6666);
+        ServerSocket socket=new ServerSocket(getPort());
         Socket socket1=socket.accept();
         return socket1;
     }

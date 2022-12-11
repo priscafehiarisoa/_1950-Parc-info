@@ -55,9 +55,9 @@ public class Mythread extends Thread{
             }
             else {
                 int index=info.getIndex(getSystemInfoVec());
-                getSystemInfoVec().add(index,info);
+                getSystemInfoVec().set(index,info);
             }
-            getSystemInfoVec().add(info);
+//            getSystemInfoVec().add(info);
 
             info.showSysteminfo();
             getSocket().close();
