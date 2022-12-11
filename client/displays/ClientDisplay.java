@@ -2,19 +2,17 @@ package client.displays;
 
 import mytemplate.MyFrame;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.Vector;
 
-public class ClientDisplay {
-    MyFrame clientWindow;
+public class ClientDisplay extends JFrame {
 
-    public MyFrame getClientWindow() {
-        return clientWindow;
+    public ClientDisplay() throws HeadlessException {
+        setSize(500,500);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+
     }
-
-    public void setClientWindow(MyFrame clientWindow) {
-        this.clientWindow = clientWindow;
-    }
-
-
-
 }

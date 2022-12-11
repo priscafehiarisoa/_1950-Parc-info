@@ -49,10 +49,14 @@ public class Mythread extends Thread{
         try {
             ObjectInputStream dis=new ObjectInputStream(getSocket().getInputStream());
             SystemInfo info = (SystemInfo) dis.readObject();
-           /* if( !info.isInList(getSystemInfoVec()))
+            if( !info.isInList(getSystemInfoVec()))
             {
                 getSystemInfoVec().add(info);
-            }*/
+            }
+            else {
+                int index=info.getIndex(getSystemInfoVec());
+                getSystemInfoVec().add(index,info);
+            }
             getSystemInfoVec().add(info);
 
             info.showSysteminfo();

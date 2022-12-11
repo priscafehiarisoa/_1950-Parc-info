@@ -14,7 +14,7 @@ public class SystemInfo implements Serializable {
     String OperatingSystem;
 
     String OSVersion;
-    String CPU;
+    String CPU_Usage;
     int processorsCores;
     String ipaddress;
     String macAddress;
@@ -91,11 +91,12 @@ public class SystemInfo implements Serializable {
         return OSVersion;
     }
 //111
-    public void setCPU(String CPU) {
-        this.CPU = CPU;
+    public void setCPU_Usage() {
+        this.CPU_Usage = String.valueOf(ManagementFactory.getOperatingSystemMXBean().getSystemLoadAverage());
+        ;
     }
-    public String getCPU() {
-        return CPU;
+    public String getCPU_Usage() {
+        return CPU_Usage;
     }
 //    111
     public void setProcessorscores() {
@@ -122,7 +123,7 @@ public class SystemInfo implements Serializable {
 //111
     public SystemInfo() throws Exception{
         setMacAddress();
-        setCPU("");
+        setCPU_Usage();
         setIpaddress();
         setOperatingSystem();
         setOSVersion();
@@ -136,7 +137,7 @@ public class SystemInfo implements Serializable {
     }
     public SystemInfo(String ipaddress) throws Exception{
         setMacAddress();
-        setCPU("");
+        setCPU_Usage();
         setIpaddress(ipaddress);
         setOperatingSystem();
         setOSVersion();
@@ -157,7 +158,7 @@ public class SystemInfo implements Serializable {
         System.out.println("OS : "+getOperatingSystem());
         System.out.println("OS version :"+getOSVersion());
         System.out.println("processorscores : "+getProcessorscores());
-        System.out.println("CPU :"+getCPU());
+        System.out.println("CPU :"+getCPU_Usage());
         System.out.println("ram: "+getRam());
         System.out.println("total disk: "+getTotaldisk());
         System.out.println("free disk: "+getFreeDiskMemory());
@@ -189,7 +190,7 @@ public class SystemInfo implements Serializable {
         data[0]=getUserName();
         data[1]=getOperatingSystem();
         data[2]=getOSVersion();
-        data[3]=getCPU();
+        data[3]=getCPU_Usage();
         data[4]=String.valueOf(getProcessorscores());
         data[5]=getIpaddress();
         data[6]=getMacAddress();
@@ -208,5 +209,15 @@ public class SystemInfo implements Serializable {
         }
         return attr;
 
+    }
+    public int getIndex(Vector<SystemInfo> systemInfos)
+    {
+        for (int i = 0; i < systemInfos.size(); i++) {
+            if(this.getIpaddress().equals(systemInfos.get(i).getIpaddress()))
+            {
+                return i;
+            }
+        }
+        return -1;
     }
 }

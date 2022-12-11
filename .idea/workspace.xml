@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2d8f78c-14ea-4b84-ae63-2612bc6d6306" name="Changes" comment="7-dec-2022: rectifications">
-      <change afterPath="$PROJECT_DIR$/thread/Mythread.java" afterDir="false" />
+    <list default="true" id="c2d8f78c-14ea-4b84-ae63-2612bc6d6306" name="Changes" comment="8-dec-2022: rectifications">
+      <change afterPath="$PROJECT_DIR$/mytemplate/Mybutton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytemplate/listener/Client_listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/displays/ClientDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/displays/ClientDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/socket/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/socket/ClientSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/display_test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/display_test/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infos/SystemInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/infos/SystemInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mytemplate/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/mytemplate/MyFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mytemplate/Tableau.java" beforeDir="false" afterPath="$PROJECT_DIR$/mytemplate/Tableau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/socket/Server_socket.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/socket/Server_socket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thread/Mythread.java" beforeDir="false" afterPath="$PROJECT_DIR$/thread/Mythread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +118,7 @@
       <workItem from="1670408719686" duration="5459000" />
       <workItem from="1670435964032" duration="2780000" />
       <workItem from="1670440671569" duration="227000" />
-      <workItem from="1670470775669" duration="1963000" />
+      <workItem from="1670470775669" duration="11721000" />
     </task>
     <task id="LOCAL-00001" summary="nth try">
       <created>1669527598984</created>
@@ -176,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670402260274</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="8-dec-2022: rectifications">
+      <created>1670473049750</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670473049750</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +207,7 @@
     <MESSAGE value="28-nov-2022: swing" />
     <MESSAGE value="29-nov-2022: swing" />
     <MESSAGE value="7-dec-2022: rectifications" />
-    <option name="LAST_COMMIT_MESSAGE" value="7-dec-2022: rectifications" />
+    <MESSAGE value="8-dec-2022: rectifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="8-dec-2022: rectifications" />
   </component>
 </project>
