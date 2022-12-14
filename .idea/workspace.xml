@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2d8f78c-14ea-4b84-ae63-2612bc6d6306" name="Changes" comment="11-dec-2022: cpu dynamique">
+    <list default="true" id="c2d8f78c-14ea-4b84-ae63-2612bc6d6306" name="Changes" comment="interface client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/displays/ClientDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/displays/ClientDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/socket/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/socket/ClientSocket.java" afterDir="false" />
@@ -121,7 +121,7 @@
       <workItem from="1670769578118" duration="57000" />
       <workItem from="1671006965976" duration="463000" />
       <workItem from="1671007713836" duration="220000" />
-      <workItem from="1671017906940" duration="3821000" />
+      <workItem from="1671017906940" duration="4180000" />
     </task>
     <task id="LOCAL-00001" summary="nth try">
       <created>1669527598984</created>
@@ -200,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670737978839</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="interface client">
+      <created>1671021971992</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671021971992</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +234,7 @@
     <MESSAGE value="8-dec-2022: rectifications" />
     <MESSAGE value="11-dec-2022: rectifications" />
     <MESSAGE value="11-dec-2022: cpu dynamique" />
-    <option name="LAST_COMMIT_MESSAGE" value="11-dec-2022: cpu dynamique" />
+    <MESSAGE value="interface client" />
+    <option name="LAST_COMMIT_MESSAGE" value="interface client" />
   </component>
 </project>
