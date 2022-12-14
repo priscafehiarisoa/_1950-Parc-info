@@ -167,7 +167,7 @@ public class SystemInfo implements Serializable {
 
     public boolean isInList(Vector<SystemInfo> SI){
         for (int i = 0; i < SI.size(); i++) {
-            if(this.getIpaddress().equals(SI.get(i).getIpaddress()) && getOperatingSystem().equals(SI.get(i).getOperatingSystem()))
+            if(this.getMacAddress().equals(SI.get(i).getMacAddress())&& this.getUserName().equals(SI.get(i).getUserName()) )
             {
                 return true;
             }

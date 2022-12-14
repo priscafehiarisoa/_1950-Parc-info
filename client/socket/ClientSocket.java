@@ -47,7 +47,7 @@ public class ClientSocket extends Thread{
 //        }
         while(true) {
             ClientSocket client = new ClientSocket();
-            client.setHost("192.168.88.165");
+            client.setHost("localhost");
             client.setPort(1234);
             client.start();
             Thread.sleep(2000);
@@ -61,18 +61,13 @@ public class ClientSocket extends Thread{
         try {
 
             Socket s = new Socket(getHost(), getPort());
-
             SystemInfo infos=new SystemInfo(s.getInetAddress().getHostAddress());
             ObjectOutputStream dout=new ObjectOutputStream(s.getOutputStream());
             dout.writeObject(infos);
             dout.flush();
             dout.close();
             s.close();
-            ClientSocket c=new ClientSocket();
-//            Thread.sleep(2000);
-//            c.start();
-
-
+//            ClientSocket c=new ClientSocket();
 //            this.start();
         } catch (Exception e) {
             System.out.println(e);

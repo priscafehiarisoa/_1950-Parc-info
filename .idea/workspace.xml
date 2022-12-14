@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c2d8f78c-14ea-4b84-ae63-2612bc6d6306" name="Changes" comment="11-dec-2022: cpu dynamique">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/displays/ClientDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/displays/ClientDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/socket/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/socket/ClientSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/display_test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/display_test/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infos/SystemInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/infos/SystemInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/socket/Server_socket.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/socket/Server_socket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thread/Mythread.java" beforeDir="false" afterPath="$PROJECT_DIR$/thread/Mythread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytemplate/listener/Client_listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/mytemplate/listener/Client_listener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,8 +90,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Server_socket" />
-        <item itemvalue="Application.ClientSocket" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ClientSocket" />
       </list>
     </recent_temporary>
   </component>
@@ -116,7 +117,11 @@
       <workItem from="1670435964032" duration="2780000" />
       <workItem from="1670440671569" duration="227000" />
       <workItem from="1670470775669" duration="11721000" />
-      <workItem from="1670729136193" duration="2155000" />
+      <workItem from="1670729136193" duration="2764000" />
+      <workItem from="1670769578118" duration="57000" />
+      <workItem from="1671006965976" duration="463000" />
+      <workItem from="1671007713836" duration="220000" />
+      <workItem from="1671017906940" duration="3821000" />
     </task>
     <task id="LOCAL-00001" summary="nth try">
       <created>1669527598984</created>
@@ -188,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670729166359</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="11-dec-2022: cpu dynamique">
+      <created>1670737978839</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670737978839</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

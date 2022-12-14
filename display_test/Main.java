@@ -1,5 +1,6 @@
 package display_test;
 
+import client.displays.ClientDisplay;
 import infos.SystemInfo;
 import mytemplate.MyFrame;
 import mytemplate.Tableau;
@@ -19,25 +20,18 @@ import java.util.Vector;
 
 public class Main {
     public static void main(String[] args) {
-        try {
-            SystemInfo sti=new SystemInfo();
-            sti.showSysteminfo();
-
-            OperatingSystemMXBean osBean =
-                    (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
-            System.out.println("p"+osBean.getSystemLoadAverage());
-            ManagementFactory.getOperatingSystemMXBean().getSystemLoadAverage();
-            System.out.println("====");
-
-        }
-
-
-
-
-        catch(Exception e)
-            {
-                e.printStackTrace();
-            }
+//        try {
+//            SystemInfo sti=new SystemInfo();
+//            sti.showSysteminfo();
+//
+//            OperatingSystemMXBean osBean =
+//                    (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
+//            System.out.println("p"+osBean.getSystemLoadAverage());
+//            ManagementFactory.getOperatingSystemMXBean().getSystemLoadAverage();
+//            System.out.println("====");
+            ClientDisplay c=new ClientDisplay();
+//
+//        }
 
         }
     }
