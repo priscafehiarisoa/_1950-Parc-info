@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2d8f78c-14ea-4b84-ae63-2612bc6d6306" name="Changes" comment="interface client">
+      <change afterPath="$PROJECT_DIR$/mytemplate/listener/ButtonListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/displays/ClientDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/displays/ClientDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/socket/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/socket/ClientSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/display_test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/display_test/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infos/SystemInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/infos/SystemInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mytemplate/listener/Client_listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/mytemplate/listener/Client_listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/displays/SocketDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/displays/SocketDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/socket/Server_socket.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/socket/Server_socket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +124,10 @@
       <workItem from="1671006965976" duration="463000" />
       <workItem from="1671007713836" duration="220000" />
       <workItem from="1671017906940" duration="4180000" />
+      <workItem from="1671040337984" duration="4175000" />
+      <workItem from="1671077316768" duration="7778000" />
+      <workItem from="1671094193575" duration="20000" />
+      <workItem from="1671342140129" duration="1700000" />
     </task>
     <task id="LOCAL-00001" summary="nth try">
       <created>1669527598984</created>
@@ -207,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671021971992</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="interface client">
+      <created>1671040349479</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1671040349479</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

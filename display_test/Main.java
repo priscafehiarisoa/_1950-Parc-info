@@ -4,6 +4,7 @@ import client.displays.ClientDisplay;
 import infos.SystemInfo;
 import mytemplate.MyFrame;
 import mytemplate.Tableau;
+import server.displays.SocketDisplay;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,16 +21,9 @@ import java.util.Vector;
 
 public class Main {
     public static void main(String[] args) {
-//        try {
-//            SystemInfo sti=new SystemInfo();
-//            sti.showSysteminfo();
-//
-//            OperatingSystemMXBean osBean =
-//                    (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
-//            System.out.println("p"+osBean.getSystemLoadAverage());
-//            ManagementFactory.getOperatingSystemMXBean().getSystemLoadAverage();
-//            System.out.println("====");
+
             ClientDisplay c=new ClientDisplay();
+//            SocketDisplay s=new SocketDisplay("server");
 //
 //        }
 

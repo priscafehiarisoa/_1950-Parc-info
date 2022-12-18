@@ -11,7 +11,7 @@ import java.util.Vector;
 
 public class ClientDisplay extends JFrame {
     ClientSocket client;
-    JTextField ip;
+    JTextField port;
     JTextField host;
     Mybutton mybutton;
 
@@ -31,12 +31,12 @@ public class ClientDisplay extends JFrame {
         this.client = client;
     }
 
-    public JTextField getIp() {
-        return ip;
+    public JTextField getPort() {
+        return port;
     }
 
-    public void setIp(JTextField ip) {
-        this.ip = ip;
+    public void setPort(JTextField port) {
+        this.port = port;
     }
 
     public JTextField getHost() {
@@ -50,25 +50,38 @@ public class ClientDisplay extends JFrame {
     public ClientDisplay() throws HeadlessException {
         setClient(new ClientSocket());
         setLayout(new GridLayout(2,1));
+        Color background=new Color(50,0,35);
         setSize(500,500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         JPanel jPanel=new JPanel();
         JPanel jp2=new JPanel();
+        setTitle("client");
+//        setLayout(null);
 
         jPanel.setSize(500,500);
-        setIp(new JTextField());
+        jPanel.setBackground(background);
+        setPort(new JTextField());
+        getPort().setBounds(50,50,200,50);
+        getPort().setPreferredSize(new Dimension(200,50));
+        getPort().setText("1234");
         setHost(new JTextField());
-        jPanel.add(getIp());
+        getHost().setBounds(50,200,200,50);
+        getHost().setPreferredSize(new Dimension(200,50));
+        getHost().setText("localhost");
+        jPanel.add(getPort());
         jPanel.add(getHost());
 
         Mybutton JB=new Mybutton(1,400,400);
         setMybutton(JB);
         jp2.add(getMybutton());
         getMybutton().addMouseListener(new Client_listener(JB, getClient(),this));
+        jp2.setBounds(100,200,200,100);
+        jp2.setBackground(background);
+
         add(jPanel);
         add(jp2);
-        add(JB);
+        jp2.add(JB);
         setFocusable(true);
         setVisible(true);
 

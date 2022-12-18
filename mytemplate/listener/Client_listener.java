@@ -68,29 +68,21 @@ public class Client_listener implements MouseListener {
     public void mouseClicked(MouseEvent e) {
 
         if(!isOn()) {
-
-
-            getClient().setHost("localhost");
-            getClient().setPort(1234);
             setOn(true);
             setSocket(true);
             getDisplay().repaint();
-            while(getSocket()) {
                 ClientSocket client = new ClientSocket();
-                client.setHost("localhost");
-                client.setPort(1234);
+                client.setHost(getDisplay().getHost().getText());
+            System.out.println(client.getHost());
+                client.setPort(Integer.parseInt(getDisplay().getPort().getText()));
                 client.start();
                 getDisplay().getMybutton().setText("starting");
                 getDisplay().repaint();
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException ex) {
-                    throw new RuntimeException(ex);
-                }
+
 
                 System.out.println("starting");
 
-            }
+
         }
         else
         {

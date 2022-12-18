@@ -1,5 +1,6 @@
 package client.socket;
 
+import client.displays.ClientDisplay;
 import infos.SystemInfo;
 import server.socket.Server_socket;
 
@@ -10,6 +11,15 @@ import java.net.Socket;
 public class ClientSocket extends Thread{
     int port;
     String host;
+    boolean runinng;
+
+    public boolean isRuninng() {
+        return runinng;
+    }
+
+    public void setRuninng(boolean runinng) {
+        this.runinng = runinng;
+    }
 
     public int getPort() {
         return port;
@@ -28,49 +38,38 @@ public class ClientSocket extends Thread{
     }
 
     public static void main(String[] args) throws Exception {
-//        try {
-//            String hostW="10.211.55.4";
-//            String hostM="localhost";
-//            String hostMac="10.37.129.2";
-//            String hostTec="192.168.19.225";
-//            String hostLinux="192.168.19.159";
-//            Socket s = new Socket(hostM, 1234);
-//
-//            SystemInfo infos=new SystemInfo();
-//            ObjectOutputStream dout=new ObjectOutputStream(s.getOutputStream());
-//            dout.writeObject(infos);
-//            dout.flush();
-//            dout.close();
-//            s.close();
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        }
+
+     /*   *//** TEST IF CLIENT IS SENDING DATAS*/
         while(true) {
             ClientSocket client = new ClientSocket();
             client.setHost("localhost");
             client.setPort(1234);
             client.start();
-            Thread.sleep(2000);
-
-
+            Thread.sleep(3000);
         }
+//        ClientDisplay c=new ClientDisplay();
     }
 
 //    @Override
     public void run() {
-        try {
+        while(true) {
+            try {
 
-            Socket s = new Socket(getHost(), getPort());
-            SystemInfo infos=new SystemInfo(s.getInetAddress().getHostAddress());
-            ObjectOutputStream dout=new ObjectOutputStream(s.getOutputStream());
-            dout.writeObject(infos);
-            dout.flush();
-            dout.close();
-            s.close();
-//            ClientSocket c=new ClientSocket();
-//            this.start();
-        } catch (Exception e) {
-            System.out.println(e);
+                Socket s = new Socket(getHost(), getPort());
+                SystemInfo infos = new SystemInfo(s.getInetAddress().getHostAddress());
+                ObjectOutputStream dout = new ObjectOutputStream(s.getOutputStream());
+                dout.writeObject(infos);
+                System.out.println("Host: "+getHost());
+                System.out.println("port: "+getPort());
+                dout.flush();
+                dout.close();
+                s.close();
+                Thread.sleep(2000);
+
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+
         }
     }
 }
