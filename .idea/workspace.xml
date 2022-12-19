@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2d8f78c-14ea-4b84-ae63-2612bc6d6306" name="Changes" comment="interface client">
-      <change afterPath="$PROJECT_DIR$/mytemplate/listener/ButtonListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/json_20220924.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Chart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_1950-Parc-info.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_1950-Parc-info.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/displays/ClientDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/displays/ClientDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/socket/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/socket/ClientSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/display_test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/display_test/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infos/SystemInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/infos/SystemInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mytemplate/listener/Client_listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/mytemplate/listener/Client_listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/displays/SocketDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/displays/SocketDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/socket/Server_socket.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/socket/Server_socket.java" afterDir="false" />
@@ -39,17 +43,36 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/priscafehiarisoadama/Desktop/socket/_1950-Parc-info&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+    &quot;last_opened_file_path&quot;: &quot;Z:/Downloads/jfreechart-1.5.2.jar&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="test" />
       <recent name="thread" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Server_socket">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Chart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Chart" />
+      <module name="_1950-Parc-info" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ClientSocket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.socket.ClientSocket" />
       <module name="_1950-Parc-info" />
@@ -91,8 +114,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Server_socket" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Server_socket" />
+        <item itemvalue="Application.Chart" />
         <item itemvalue="Application.ClientSocket" />
       </list>
     </recent_temporary>
@@ -127,7 +151,14 @@
       <workItem from="1671040337984" duration="4175000" />
       <workItem from="1671077316768" duration="7778000" />
       <workItem from="1671094193575" duration="20000" />
-      <workItem from="1671342140129" duration="1700000" />
+      <workItem from="1671342140129" duration="4681000" />
+      <workItem from="1671351928195" duration="6297000" />
+      <workItem from="1671420406469" duration="708000" />
+      <workItem from="1671447596262" duration="947000" />
+      <workItem from="1671453000886" duration="351000" />
+      <workItem from="1671458336356" duration="8104000" />
+      <workItem from="1671471677054" duration="370000" />
+      <workItem from="1671473771638" duration="7939000" />
     </task>
     <task id="LOCAL-00001" summary="nth try">
       <created>1669527598984</created>
@@ -220,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671040349479</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="interface client">
+      <created>1671343874025</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671343874025</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,5 +287,30 @@
     <MESSAGE value="11-dec-2022: cpu dynamique" />
     <MESSAGE value="interface client" />
     <option name="LAST_COMMIT_MESSAGE" value="interface client" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/display_test/Main.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client/socket/ClientSocket.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/display_test/Main.java</url>
+          <line>29</line>
+          <properties class="display_test.Main" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -31,7 +31,7 @@ public class Server_socket extends Thread{
         return socket1;
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         SocketDisplay s=new SocketDisplay("server");
 //        runServer();
     }

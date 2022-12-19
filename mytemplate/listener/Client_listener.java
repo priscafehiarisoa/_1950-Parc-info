@@ -13,8 +13,8 @@ public class Client_listener implements MouseListener {
     Mybutton mybutton;
     ClientSocket client;
     ClientDisplay display;
-    Boolean on=false;
-    Boolean socket;
+    Boolean on=true;
+    Boolean socket=true;
 
     public Boolean getSocket() {
         return socket;
@@ -67,32 +67,26 @@ public class Client_listener implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e) {
 
-        if(!isOn()) {
-            setOn(true);
+
+        if(isOn()) {
+
             setSocket(true);
             getDisplay().repaint();
-                ClientSocket client = new ClientSocket();
-                client.setHost(getDisplay().getHost().getText());
-            System.out.println(client.getHost());
-                client.setPort(Integer.parseInt(getDisplay().getPort().getText()));
-                client.start();
-                getDisplay().getMybutton().setText("starting");
-                getDisplay().repaint();
-
-
-                System.out.println("starting");
-
-
-        }
-        else
-        {
-            setOn(false);
-            setSocket(false);
-            getDisplay().getMybutton().setText("stopped");
+            getClient().setHost(getDisplay().getHost().getText());
+            getClient().setRuninng(true);
+            System.out.println(getClient().getHost());
+            getClient().setPort(Integer.parseInt(getDisplay().getPort().getText()));
+            getClient().start();
+            getDisplay().getMybutton().setText("starting");
             getDisplay().repaint();
+            setOn(false);
+        } else if (!isOn() && getSocket()) {
+            getClient().setRuninng(false);
+            getDisplay().getMybutton().setText("stopped");
 
-//            getClient().stop();
+            setOn(true);
         }
+
 
     }
 

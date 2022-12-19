@@ -48,7 +48,14 @@ public class ClientDisplay extends JFrame {
     }
 
     public ClientDisplay() throws HeadlessException {
+        //creer le socket client
         setClient(new ClientSocket());
+
+        JLabel label=new JLabel("veuillez remplir les champs ci-dessus ");
+        label.setForeground(new Color(200,200,255));
+        label.setFont(new Font("Serif", Font.PLAIN, 20));
+        label.setBounds(100,10,350,350);
+
         setLayout(new GridLayout(2,1));
         Color background=new Color(50,0,35);
         setSize(500,500);
@@ -57,6 +64,7 @@ public class ClientDisplay extends JFrame {
         JPanel jPanel=new JPanel();
         JPanel jp2=new JPanel();
         setTitle("client");
+        jPanel.add(label);
 //        setLayout(null);
 
         jPanel.setSize(500,500);
@@ -66,7 +74,7 @@ public class ClientDisplay extends JFrame {
         getPort().setPreferredSize(new Dimension(200,50));
         getPort().setText("1234");
         setHost(new JTextField());
-        getHost().setBounds(50,200,200,50);
+        getHost().setBounds(250,50,200,50);
         getHost().setPreferredSize(new Dimension(200,50));
         getHost().setText("localhost");
         jPanel.add(getPort());
@@ -75,9 +83,13 @@ public class ClientDisplay extends JFrame {
         Mybutton JB=new Mybutton(1,400,400);
         setMybutton(JB);
         jp2.add(getMybutton());
+        // creer le socket client
         getMybutton().addMouseListener(new Client_listener(JB, getClient(),this));
         jp2.setBounds(100,200,200,100);
         jp2.setBackground(background);
+        jPanel.setBackground(background);
+        jPanel.setLayout(null);
+
 
         add(jPanel);
         add(jp2);

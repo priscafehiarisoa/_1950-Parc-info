@@ -5,7 +5,10 @@ import java.io.Serializable;
 import java.lang.management.ManagementFactory;
 import java.lang.reflect.Field;
 import java.net.*;
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.Enumeration;
+import java.util.Scanner;
 import java.util.Vector;
 
 public class SystemInfo implements Serializable {
@@ -14,13 +17,23 @@ public class SystemInfo implements Serializable {
     String OperatingSystem;
 
     String OSVersion;
-    String CPU_Usage;
+    double CPU_Usage;
     int processorsCores;
     String ipaddress;
     String macAddress;
     double ram;
     double totaldisk;
     double freeDiskMemory;
+    Timestamp heure;
+
+    public Timestamp getHeure() {
+        return heure;
+    }
+
+    public void setHeure() {
+        Instant instant=Instant.now();
+        this.heure =new Timestamp(System.currentTimeMillis()) ;
+    }
 
     public double getFreeDiskMemory() {
         return freeDiskMemory;
@@ -29,6 +42,7 @@ public class SystemInfo implements Serializable {
     public void setFreeDiskMemory() {
 
         this.freeDiskMemory = new File("/").getFreeSpace()*9.31e-10;
+
     }
 //111
     public double getRam() {
@@ -91,11 +105,17 @@ public class SystemInfo implements Serializable {
         return OSVersion;
     }
 //111
-    public void setCPU_Usage() {
-        this.CPU_Usage = String.valueOf(ManagementFactory.getOperatingSystemMXBean().getSystemLoadAverage());
+    public void setCPU_Usage() throws Exception {
+//        this.CPU_Usage = (ManagementFactory.getOperatingSystemMXBean().getSystemLoadAverage());
         ;
+        if(this.getOperatingSystem().contains("dow")){
+            this.CPU_Usage=getCPULoad();
+        }
+        else{
+            this.CPU_Usage=getCPULoad3();
+        }
     }
-    public String getCPU_Usage() {
+    public double getCPU_Usage() {
         return CPU_Usage;
     }
 //    111
@@ -123,7 +143,6 @@ public class SystemInfo implements Serializable {
 //111
     public SystemInfo() throws Exception{
         setMacAddress();
-        setCPU_Usage();
         setIpaddress();
         setOperatingSystem();
         setOSVersion();
@@ -133,11 +152,13 @@ public class SystemInfo implements Serializable {
         setRam();
         setTotaldisk();
         setFreeDiskMemory();
+        setHeure();
+        setCPU_Usage();
+
 
     }
     public SystemInfo(String ipaddress) throws Exception{
         setMacAddress();
-        setCPU_Usage();
         setIpaddress(ipaddress);
         setOperatingSystem();
         setOSVersion();
@@ -146,6 +167,9 @@ public class SystemInfo implements Serializable {
         setRam();
         setTotaldisk();
         setFreeDiskMemory();
+        setHeure();
+        setCPU_Usage();
+
 
 
     }
@@ -162,12 +186,14 @@ public class SystemInfo implements Serializable {
         System.out.println("ram: "+getRam());
         System.out.println("total disk: "+getTotaldisk());
         System.out.println("free disk: "+getFreeDiskMemory());
+//        this.setHeure();
+        System.out.println(getHeure());
     }
 
 
     public boolean isInList(Vector<SystemInfo> SI){
         for (int i = 0; i < SI.size(); i++) {
-            if(this.getMacAddress().equals(SI.get(i).getMacAddress())&& this.getUserName().equals(SI.get(i).getUserName()) )
+            if(this.getMacAddress().equals(SI.get(i).getMacAddress())&& this.getUserName().equals(SI.get(i).getUserName())&& this.getOSVersion().equals(SI.get(i).getOSVersion()))
             {
                 return true;
             }
@@ -186,17 +212,19 @@ public class SystemInfo implements Serializable {
 
     public String [] createSystemInfoTable()
     {
-        String [] data=new String[10];
+        String [] data=new String[11];
         data[0]=getUserName();
         data[1]=getOperatingSystem();
         data[2]=getOSVersion();
-        data[3]=getCPU_Usage();
+        data[3]= String.valueOf(getCPU_Usage());
         data[4]=String.valueOf(getProcessorscores());
         data[5]=getIpaddress();
         data[6]=getMacAddress();
         data[7]= String.valueOf(getRam());
         data[8]= String.valueOf(getTotaldisk());
         data[9]= String.valueOf(getFreeDiskMemory());
+        data[10]= String.valueOf((getHeure()));
+
 
         return data;
     }
@@ -219,5 +247,27 @@ public class SystemInfo implements Serializable {
             }
         }
         return -1;
+    }
+    public static double getCPULoad3() {
+        double load = 0.0;
+        try {
+            ProcessBuilder processBuilder = new ProcessBuilder("bash", "-c", "top -l 1 | grep 'CPU usage'");
+            Process process = processBuilder.start();
+            process.waitFor();
+            String output = new String(process.getInputStream().readAllBytes());
+            load = Double.parseDouble(output.split(":")[1].split("%")[0].trim());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return load;
+    }
+    public static double getCPULoad() throws Exception {
+        Process process = Runtime.getRuntime().exec("wmic cpu get loadpercentage");
+        process.getOutputStream().close();
+        Scanner sc = new Scanner(process.getInputStream());
+        sc.next();
+        double load = sc.nextDouble();
+        sc.close();
+        return load;
     }
 }
