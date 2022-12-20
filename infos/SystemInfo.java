@@ -201,15 +201,6 @@ public class SystemInfo implements Serializable {
         return false;
     }
 
-/*    public String [] createSystemInfoTable()
-    {
-        Field [] field= getClass().getDeclaredFields();
-        String [] data=new String[field.length];
-        for (int i = 0; i < field.length; i++) {
-            data[i]=this.getClass().getMethod()
-        }
-    }*/
-
     public String [] createSystemInfoTable()
     {
         String [] data=new String[11];
